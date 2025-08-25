@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 6 -  Exibir todos os divisores de um número. </title>
+    <title>Exercício 7 -   Verificar se o número é perfeito. </title>
 </head>
 <body>
     <form method="POST" action="">
