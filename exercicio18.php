@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 9 - Receber dois números e exibir a soma de todos os números entre eles.</title>
+    <title>Exercício 18 - Receber 3 números e informar qual é o maior.</title>
 </head>
 <body>
     <form method="POST" action="">
@@ -12,35 +12,32 @@
 
         <label for="numero">Digite o segundo número:</label>
         <input type="number" name="num2" required><br><br>
-
+        <button type="submit"
+        
+        <label for="numero">Digite o terceiro número:</label>
+        <input type="number" name="num3" required><br><br>
         <button type="submit"
         name="verificar">Enviar</button>
-
     </form>
-    
+
     <?php
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST['verificar'])){
                 $num1 = $_POST['num1'];
                 $num2 = $_POST['num2'];
+                $num3 = $_POST['num3'];
 
-                 $x = $num1;
-                for($i = $x; $i > 0; $i--){
-                    $x = $x + $i;
+                if ($num1 > $num2 && $num1>$num3){
+                    echo "O número $num1 é o maior";
+                } elseif ($num1 < $num2 && $num2>$num3){
+                    echo "O número $num2 é o maior";
+                } else {
+                    echo "O múmero $num3 é o maior.";
                 }
-
-                $x = $x - $num1;
-
-                $y = $num2;
-                for($i = $y; $i > 0; $i--){
-                    $y = $y + $i;
-                }
-
-                $y = $y - $num2;
-                $soma = $x + $y;
-                echo "A soma dos dois números informados é: $soma";
             }
         }
     ?>
+
+    
 </body>
 </html>
