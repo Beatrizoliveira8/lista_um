@@ -13,7 +13,7 @@
         <label for="numero">Digite a palavra:</label>
         <input type="text" id="palavra" name="palavra" required>
         <button type="submit" 
-        name="vogais">Verificar</button>
+        name="vogais">Exibir</button>
     </form>
 
     <?php
