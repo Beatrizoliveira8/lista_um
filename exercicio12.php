@@ -18,7 +18,7 @@
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['cv'])) {
+        if (isset($_POST['vogais'])) {
             $vogais = ['a', 'e', 'i', 'o', 'u'];
             $palavra = strtolower($_POST['palavra']); 
             foreach ($vogais as $vogal) {
